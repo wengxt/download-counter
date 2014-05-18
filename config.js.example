@@ -1,0 +1,10 @@
+var config;
+
+config = {
+    path: process.env.HOME,
+    database: {
+        filename: "./db.sqlite"
+    }
+};
+
+module.exports = config;

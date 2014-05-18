@@ -1,0 +1,26 @@
+doctype html
+html
+    head
+        title= path
+        link(rel='stylesheet', href='/style.css')
+        script(src='/script.js')
+    body
+        input#search(type="text",placeholder="Search",autocomplete="off")
+        #wrapper
+            h1= path
+            ul#files(class="view-details")
+                li(class="header")
+                    span(class="name") Name
+                    span(class="size") Size
+                    span(class="count") Count
+                    span(class="date") Modified
+                each file in files
+                    li
+                        a(href=file.path)
+                            span(class="name")
+                                img(src="/icons/"+file.icon)
+                                = file.name
+                            span(class="size")= file.isDir?"":file.size
+                            span(class="count")= file.isDir?"":file.count
+                            span(class="date")= file.date
+

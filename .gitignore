@@ -1,0 +1,6 @@
+config.js
+*.sqlite
+*.swp
+*~
+*.log
+node_modules
