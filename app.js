@@ -12,9 +12,7 @@ counter.init().then(function () {
     app.use('/', directory(config.path));
 
     app.use(function(req, res, next) {
-        var err = new Error('Not Found');
-        err.status = 404;
-        next(err);
+        res.status(404).render('404');
     });
 });
 
